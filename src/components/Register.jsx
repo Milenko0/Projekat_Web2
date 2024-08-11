@@ -43,7 +43,7 @@ const handleRegisterClick = async (e) => {
     
     const resultOfRegister = await RegularRegisterApiCall(formData, regularRegisterApiEndpoint);
     if (resultOfRegister) {
-        alert("Successfully registered!");
+        alert("Uspesno ste se registrovali!");
         navigate("/");
     }
 };
@@ -70,11 +70,11 @@ const onSuccess = (res) => {
         firstName: profile.givenName,
         lastName: profile.familyName,
     });
-    alert("Please complete other fields!");
+    alert("Popunite ostala polja!");
 }
 
 const onFailure = (res) => {
-    console.log("Failed to register:", res);
+    console.log("Greska pri registraciji:", res);
 }
 
   return (
